@@ -8,48 +8,6 @@
 </head>
 <body>
   <div id="root"/>
-
-  <script src="https://unpkg.com/react@latest/dist/react.js"></script>
-  <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-  <script type="text/babel">
-    class Counter extends React.Component {
-
-      constructor() {
-        super();
-
-        this.decrement = this.decrement.bind(this);
-        this.increment = this.increment.bind(this);
-        this.state = {
-          count: 0
-        };
-      }
-
-      decrement() {
-        let count = this.state.count - 1;
-        count = (count < 0) ? 0 : count;
-        this.setState({ count: count });
-      }
-
-      increment() {
-        this.setState({ count: this.state.count + 1 });
-      }
-
-      render() {
-        return (
-          <div>
-            <h1>Count : {this.state.count}</h1>
-            <button onClick={this.decrement}>-1</button>
-            <button onClick={this.increment}>+1</button>
-          </div>
-        );
-      }
-    }
-
-    ReactDOM.render(
-      <Counter />,
-      document.getElementById('root')
-    );
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
